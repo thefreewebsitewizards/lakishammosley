@@ -188,6 +188,88 @@
                     min-height: 100svh; /* Use small viewport height for mobile */
                 }
             }
+            
+            /* Device-specific adjustments for problematic devices */
+            /* iPhone SE (375x667) */
+            @media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+                .hero-bg {
+                    min-height: 100vh !important;
+                    padding-top: 6rem !important;
+                    padding-bottom: 4rem !important;
+                    align-items: flex-start !important;
+                    justify-content: flex-start !important;
+                }
+                .hero-bg .max-w-7xl {
+                    padding-top: 2rem !important;
+                    padding-bottom: 3rem !important;
+                }
+                .hero-bg h1 {
+                    font-size: 1.75rem !important;
+                    margin-bottom: 1rem !important;
+                }
+                .hero-bg h2 {
+                    font-size: 1.125rem !important;
+                    margin-bottom: 1rem !important;
+                }
+                .hero-bg p {
+                    font-size: 0.875rem !important;
+                    margin-bottom: 2rem !important;
+                }
+            }
+            
+            /* iPhone 12 Pro (390x844) */
+            @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+                .hero-bg {
+                    min-height: 100vh !important;
+                    padding-top: 6rem !important;
+                    padding-bottom: 4rem !important;
+                    align-items: flex-start !important;
+                    justify-content: flex-start !important;
+                }
+                .hero-bg .max-w-7xl {
+                    padding-top: 2rem !important;
+                    padding-bottom: 3rem !important;
+                }
+                .hero-bg h1 {
+                    font-size: 2rem !important;
+                    margin-bottom: 1rem !important;
+                }
+                .hero-bg h2 {
+                    font-size: 1.25rem !important;
+                    margin-bottom: 1rem !important;
+                }
+                .hero-bg p {
+                    font-size: 0.9rem !important;
+                    margin-bottom: 2rem !important;
+                }
+            }
+            
+            /* Samsung Galaxy S8+ (360x740) */
+            @media only screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4) {
+                .hero-bg {
+                    min-height: 100vh !important;
+                    padding-top: 6rem !important;
+                    padding-bottom: 4rem !important;
+                    align-items: flex-start !important;
+                    justify-content: flex-start !important;
+                }
+                .hero-bg .max-w-7xl {
+                    padding-top: 2rem !important;
+                    padding-bottom: 3rem !important;
+                }
+                .hero-bg h1 {
+                    font-size: 1.75rem !important;
+                    margin-bottom: 1rem !important;
+                }
+                .hero-bg h2 {
+                    font-size: 1.125rem !important;
+                    margin-bottom: 1rem !important;
+                }
+                .hero-bg p {
+                    font-size: 0.875rem !important;
+                    margin-bottom: 2rem !important;
+                }
+            }
         </style>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
