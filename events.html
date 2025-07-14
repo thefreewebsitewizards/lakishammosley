@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | The LM Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#F9F4F0] font-montserrat text-gray-800 leading-relaxed">
+    <div id="cursor" class="fixed w-8 h-8 rounded-full bg-[#E86F68] bg-opacity-30 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 z-50 mix-blend-difference"></div>
+    <!-- Loading Animation -->
+    <div id="loader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div class="loader-circle animate-spin rounded-full border-4 border-t-[#E86F68] border-b-[#8FB0A9] border-l-[#E86F68] border-r-[#8FB0A9] w-16 h-16"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-passionate text-3xl text-[#8FB0A9]">The LM Experience</span>
+                    <span class="text-[#E86F68] text-2xl ml-1">♥</span>
+                </div>
+                <div class="hidden md:block ml-auto">
+                    <div class="flex items-center space-x-4">
+                        <a href="index.html" class="text-black hover:text-[#E86F68] px-3 py-2 text-sm font-medium transition-all duration-300">Home</a>
+                        <a href="about.html" class="text-black hover:text-[#E86F68] px-3 py-2 text-sm font-medium transition-all duration-300">About</a>
+                        <a href="services.html" class="text-black hover:text-[#E86F68] px-3 py-2 text-sm font-medium transition-all duration-300">Services</a>
+                        <a href="events.html" class="text-black hover:text-[#E86F68] px-3 py-2 text-sm font-medium transition-all duration-300">Events</a>
+                        <a href="gallery.html" class="text-black hover:text-[#E86F68] px-3 py-2 text-sm font-medium transition-all duration-300">Gallery</a>
+                        <a href="contact.html" class="bg-[#E86F68] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#d45f58] transition duration-300 ml-2">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-black focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-black hover:text-[#E86F68] hover:bg-gray-50 rounded-lg transition-all duration-300">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-black hover:text-[#E86F68] hover:bg-gray-50 rounded-lg transition-all duration-300">About</a>
+                <a href="services.html" class="block px-3 py-2 text-base font-medium text-black hover:text-[#E86F68] hover:bg-gray-50 rounded-lg transition-all duration-300">Services</a>
+                <a href="events.html" class="block px-3 py-2 text-base font-medium text-black hover:text-[#E86F68] hover:bg-gray-50 rounded-lg transition-all duration-300">Events</a>
+                <a href="gallery.html" class="block px-3 py-2 text-base font-medium text-black hover:text-[#E86F68] hover:bg-gray-50 rounded-lg transition-all duration-300">Gallery</a>
+                <a href="contact.html" class="block px-5 py-2 text-base font-medium text-white bg-[#E86F68] rounded-full mx-4 text-center hover:bg-[#d45f58] transition-all duration-300">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-white pt-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-passionate text-4xl md:text-5xl text-[#8FB0A9] mb-4">Featured Events</h2>
+                <div class="w-24 h-1 bg-[#E86F68] mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-lg">Join us for transformative experiences that prioritize mental wellness.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Event Card 1 - March -->
+                <div class="event-card bg-[#F9F4F0] rounded-lg shadow-lg overflow-hidden transition duration-300 flex flex-col h-full">
+                    <div class="relative">
+                        <img src="images/Leading with Strength.png" alt="Leading with Strength" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-[#8FB0A9] text-white px-3 py-1 rounded-full text-sm font-bold">MAR 8</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-montserrat-bold text-xl text-[#8FB0A9] font-medium">Leading with Strength</h3>
+                            <span class="bg-[#E86F68] bg-opacity-20 text-[#E86F68] px-3 py-1 rounded-full text-xs">Women's History Month</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Empowering Women Entrepreneurs to Prioritize Mental Wellness</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>March 8, 2025</span>
+                        </div>
+                        <div class="flex items-center text-gray-500 mb-6 flex-grow">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>In-Person Experience | Location TBD</span>
+                        </div>
+                        <a href="https://lakisha.myflodesk.com/leadingwithstrength" class="block text-center bg-[#E86F68] hover:bg-[#d45f58] text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 mt-auto">RSVP Now</a>
+                    </div>
+                </div>
+                
+                <!-- Event Card 2 - May -->
+                <div class="event-card bg-[#F9F4F0] rounded-lg shadow-lg overflow-hidden transition duration-300 flex flex-col h-full">
+                    <div class="relative">
+                        <img src="images/My Mind is My Business.png" alt="My Mind is My Business" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-[#8FB0A9] text-white px-3 py-1 rounded-full text-sm font-bold">MAY 16-17</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-montserrat-bold text-xl text-[#8FB0A9] font-medium">My Mind is My Business</h3>
+                            <span class="bg-[#8FB0A9] bg-opacity-20 text-[#8FB0A9] px-3 py-1 rounded-full text-xs">Mental Health Conference</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">2 Day In-Person Experience</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>May 16-17, 2025</span>
+                        </div>
+                        <div class="flex items-center text-gray-500 mb-6 flex-grow">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Four Points Sheraton IAH</span>
+                        </div>
+                        <a href="https://www.mymindismybusiness.com/" class="block text-center bg-[#8FB0A9] hover:bg-[#7a9c95] text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 mt-auto">Register Now</a>
+                    </div>
+                </div>
+                
+                <!-- Event Card 3 - July -->
+                <div class="event-card bg-[#F9F4F0] rounded-lg shadow-lg overflow-hidden transition duration-300 flex flex-col h-full">
+                    <div class="relative">
+                        <img src="images/Breaking Barriers.png" alt="Breaking Barriers" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-[#8FB0A9] text-white px-3 py-1 rounded-full text-sm font-bold">JUL 19</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-montserrat-bold text-xl text-[#8FB0A9] font-medium">Breaking Barriers</h3>
+                            <span class="bg-[#8FB0A9] bg-opacity-20 text-[#8FB0A9] px-3 py-1 rounded-full text-xs">Minority Mental Health</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Mental Health Equity in Minority Communities</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>July 19, 2025</span>
+                        </div>
+                        <div class="flex items-center text-gray-500 mb-6 flex-grow">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>1 Day Virtual Experience</span>
+                        </div>
+                        <a href="contact.html" class="block text-center bg-[#8FB0A9] hover:bg-[#7a9c95] text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 mt-auto">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Event Card 4 - August -->
+                <div class="event-card bg-[#F9F4F0] rounded-lg shadow-lg overflow-hidden transition duration-300 flex flex-col h-full">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Navigating Grief" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-[#8FB0A9] text-white px-3 py-1 rounded-full text-sm font-bold">AUG 30</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-montserrat-bold text-xl text-[#8FB0A9] font-medium">Navigating Grief as an Entrepreneur</h3>
+                            <span class="bg-[#E86F68] bg-opacity-20 text-[#E86F68] px-3 py-1 rounded-full text-xs">Workshop</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">1 Day In-Person Experience</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>August 30, 2025</span>
+                        </div>
+                        <div class="flex items-center text-gray-500 mb-6 flex-grow">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Location TBD</span>
+                        </div>
+                        <a href="contact.html" class="block text-center bg-[#E86F68] hover:bg-[#d45f58] text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 mt-auto">Register Interest</a>
+                    </div>
+                </div>
+                
+                <!-- Event Card 5 - September -->
+                <div class="event-card bg-[#F9F4F0] rounded-lg shadow-lg overflow-hidden transition duration-300 flex flex-col h-full">
+                    <div class="relative">
+                        <img src="images/Hope in Action.jpg" alt="Hope in Action" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-[#8FB0A9] text-white px-3 py-1 rounded-full text-sm font-bold">SEP 13</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-montserrat-bold text-xl text-[#8FB0A9] font-medium">Hope in Action</h3>
+                            <span class="bg-[#8FB0A9] bg-opacity-20 text-[#8FB0A9] px-3 py-1 rounded-full text-xs">Suicide Prevention</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Suicide Prevention for Women Entrepreneurs</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>September 13, 2025</span>
+                        </div>
+                        <div class="flex items-center text-gray-500 mb-6 flex-grow">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>1 Day Virtual Experience</span>
+                        </div>
+                        <a href="contact.html" class="block text-center bg-[#8FB0A9] hover:bg-[#7a9c95] text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 mt-auto">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Event Card 6 - October -->
+                <div class="event-card bg-[#F9F4F0] rounded-lg shadow-lg overflow-hidden transition duration-300 flex flex-col h-full">
+                    <div class="relative">
+                        <img src="images/mind your business.jpg" alt="Mind Your Business" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-[#8FB0A9] text-white px-3 py-1 rounded-full text-sm font-bold">OCT 10</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-montserrat-bold text-xl text-[#8FB0A9] font-medium">Mind Your Business</h3>
+                            <span class="bg-[#8FB0A9] bg-opacity-20 text-[#8FB0A9] px-3 py-1 rounded-full text-xs">World Mental Health Day</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Prioritizing Mental Health for Sustainable Success</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>October 10, 2025</span>
+                        </div>
+                        <div class="flex items-center text-gray-500 mb-6 flex-grow">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>1 Day Virtual Experience</span>
+                        </div>
+                        <a href="https://lakishamosley.com/myb-community" class="block text-center bg-[#8FB0A9] hover:bg-[#7a9c95] text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 mt-auto">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="contact.html" class="inline-block bg-[#E86F68] hover:bg-[#d45f58] text-white px-8 py-3 rounded-full text-lg font-medium transition duration-300">Book Your Wellness Event</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <span class="font-passionate text-3xl text-[#8FB0A9]">The LM Experience</span>
+                        <span class="text-[#E86F68] text-2xl ml-1">♥</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">Creating community, care & conversation.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-montserrat-bold font-medium mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                            <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                            <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                            <li><a href="events.html" class="text-gray-400 hover:text-white transition duration-300">Events</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-montserrat-bold font-medium mb-4">Connect</h4>
+                        <ul class="space-y-2">
+                            <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                            <li><a href="https://www.instagram.com/thelmexperienceco/" target="_blank" class="text-gray-400 hover:text-white transition duration-300">Instagram</a></li>
+                            <li><a href="https://lakishamosley.com" target="_blank" class="text-gray-400 hover:text-white transition duration-300">LaKishaMosley.com</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-montserrat-bold font-medium mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p class="font-montserrat">&copy; 2025 The LM Experience. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

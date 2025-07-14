@@ -1,0 +1,221 @@
+@import url('https://fonts.cdnfonts.com/css/gallalio');
+@import url('https://fonts.cdnfonts.com/css/feeling-passionate');
+@import url('https://fonts.cdnfonts.com/css/tt-nooks-script');
+
+.font-montserrat-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.font-passionate {
+    font-family: 'Feeling Passionate', cursive, serif;
+    font-weight: 400;
+}
+.font-nooks {
+    font-family: 'TT Nooks Script', cursive, serif;
+    font-weight: 400;
+}
+
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Responsive background adjustments */
+@media (max-width: 1024px) {
+    .hero-bg {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-bg {
+        background-position: center center;
+        min-height: 100vh;
+        min-height: 100dvh; /* Dynamic viewport height for better mobile support */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-bg {
+        background-position: 30% center; /* Better focus on mobile */
+    }
+}
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.instagram-feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero-content {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 768px) {
+    .hero-bg {
+        min-height: 100vh;
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-bg {
+        min-height: 100svh; /* Use small viewport height for mobile */
+    }
+}
+
+/* Device-specific adjustments for problematic devices */
+/* iPhone SE (375x667) */
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+    .hero-bg {
+        min-height: 100vh !important;
+        padding-top: 6rem !important;
+        padding-bottom: 4rem !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+    }
+    .hero-bg .max-w-7xl {
+        padding-top: 2rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .hero-bg h1 {
+        font-size: 1.75rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .hero-bg h2 {
+        font-size: 1.125rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .hero-bg p {
+        font-size: 0.875rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+/* iPhone 12 Pro (390x844) */
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    .hero-bg {
+        min-height: 100vh !important;
+        padding-top: 6rem !important;
+        padding-bottom: 4rem !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+    }
+    .hero-bg .max-w-7xl {
+        padding-top: 2rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .hero-bg h1 {
+        font-size: 2rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .hero-bg h2 {
+        font-size: 1.25rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .hero-bg p {
+        font-size: 0.9rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+/* Samsung Galaxy S8+ (360x740) */
+@media only screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4) {
+    .hero-bg {
+        min-height: 100vh !important;
+        padding-top: 6rem !important;
+        padding-bottom: 4rem !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+    }
+    .hero-bg .max-w-7xl {
+        padding-top: 2rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .hero-bg h1 {
+        font-size: 1.75rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .hero-bg h2 {
+        font-size: 1.125rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .hero-bg p {
+        font-size: 0.875rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+.scroll-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+.scroll-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
